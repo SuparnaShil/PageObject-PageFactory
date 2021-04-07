@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import objectRepository.RediffHomePage;
 import objectRepository.RediffLoginPage;
+import objectRepository.RediffLoginPagePF;
  
 public class LoginApp {
 
@@ -15,7 +16,7 @@ public class LoginApp {
 		System.setProperty("webdriver.chrome.driver", "E:\\Selenium file\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
-		RediffLoginPage rediff = new RediffLoginPage(driver);
+		RediffLoginPagePF rediff = new RediffLoginPagePF(driver);
 		
 		rediff.EmailId().sendKeys("Hello");
 		rediff.PassWord().sendKeys("12345");
